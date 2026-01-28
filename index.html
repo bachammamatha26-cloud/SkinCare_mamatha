@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow Skincare - Premium Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 30px 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            color: #718096;
+            font-size: 1.2em;
+            font-style: italic;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            color: white;
+        }
+
+        .product-card:nth-child(2) .product-image {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .product-card:nth-child(3) .product-image {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .product-card:nth-child(4) .product-image {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .product-card:nth-child(5) .product-image {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .product-card:nth-child(6) .product-image {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-category {
+            font-size: 0.85em;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-name {
+            font-size: 1.4em;
+            color: #2d3748;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .price {
+            font-size: 1.8em;
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .add-to-cart {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: opacity 0.3s ease;
+        }
+
+        .add-to-cart:hover {
+            opacity: 0.9;
+        }
+
+        .rating {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 10px;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #718096;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ GLOW SKINCARE</h1>
+            <p class="tagline">Radiance in Every Drop</p>
+        </header>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">🌸</div>
+                <div class="product-info">
+                    <div class="product-category">Moisturizer</div>
+                    <h2 class="product-name">Hydra Boost Cream</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="product-description">Deep hydration formula with hyaluronic acid and vitamin E for all-day moisture.</p>
+                    <div class="product-footer">
+                        <span class="price">$45</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">🌹</div>
+                <div class="product-info">
+                    <div class="product-category">Serum</div>
+                    <h2 class="product-name">Vitamin C Glow Serum</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                    </div>
+                    <p class="product-description">Brightening serum that targets dark spots and evens skin tone with powerful antioxidants.</p>
+                    <div class="product-footer">
+                        <span class="price">$58</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">💧</div>
+                <div class="product-info">
+                    <div class="product-category">Cleanser</div>
+                    <h2 class="product-name">Gentle Foam Cleanser</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="product-description">Mild, pH-balanced cleanser that removes impurities without stripping natural oils.</p>
+                    <div class="product-footer">
+                        <span class="price">$32</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">🍃</div>
+                <div class="product-info">
+                    <div class="product-category">Face Mask</div>
+                    <h2 class="product-name">Green Tea Clay Mask</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">☆</span>
+                    </div>
+                    <p class="product-description">Detoxifying mask with natural clay and green tea extract to purify and refresh skin.</p>
+                    <div class="product-footer">
+                        <span class="price">$38</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">☀️</div>
+                <div class="product-info">
+                    <div class="product-category">Sunscreen</div>
+                    <h2 class="product-name">Daily UV Shield SPF 50</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="product-description">Lightweight, non-greasy sunscreen with broad-spectrum protection for daily use.</p>
+                    <div class="product-footer">
+                        <span class="price">$42</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">🌙</div>
+                <div class="product-info">
+                    <div class="product-category">Night Cream</div>
+                    <h2 class="product-name">Repair Night Cream</h2>
+                    <div class="rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="product-description">Intensive overnight treatment with retinol and peptides for anti-aging benefits.</p>
+                    <div class="product-footer">
+                        <span class="price">$65</span>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Glow Skincare. All products are cruelty-free and dermatologist-tested.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add some interactivity
+        const buttons = document.querySelectorAll('.add-to-cart');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const productName = this.closest('.product-card').querySelector('.product-name').textContent;
+                this.textContent = '✓ Added!';
+                this.style.background = '#48bb78';
+                
+                setTimeout(() => {
+                    this.textContent = 'Add to Cart';
+                    this.style.background = '';
+                }, 2000);
+                
+                console.log(`Added ${productName} to cart`);
+            });
+        });
+
+        // Make cards clickable for product details
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const productName = this.querySelector('.product-name').textContent;
+                alert(`View details for: ${productName}\n\n(In a real store, this would open a detailed product page)`);
+            });
+        });
+    </script>
+</body>
+</html>
